@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coffee brewing science, equipment analysis, and the pursuit of the perfect cup">
+    <title>Coffee - Experiments & Systems</title>
+    
+    <!-- Preconnect to font sources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font loading with fallbacks -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Theme detection -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme-preference') || 'auto';
+            if (theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-home">Experiments & Systems</a>
+            <div class="nav-links">
+                <a href="productivity.html">Productivity</a>
+                <a href="music.html">Music</a>
+                <a href="coffee.html">Coffee</a>
+                <a href="example-post.html">Writing</a>
+                <a href="about.html">About</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article>
+            <header class="page-header">
+                <h1>Coffee</h1>
+                <p class="subtitle">The chemistry of extraction and the art of preparation</p>
+            </header>
+
+            <section>
+                <p class="first-paragraph">
+                    <span class="dropcap">C</span>offee brewing is applied chemistry. Water dissolves compounds from ground coffee beans according to principles of extraction science — temperature, time, particle size, and water chemistry all affect which flavors end up in the cup. Yet within these constraints lies remarkable creative potential. This page documents experiments in brewing technique, equipment analysis, and the systematic pursuit of better coffee<span class="sidenote-mark" data-content="The modern specialty coffee movement began in the 1960s with pioneers like Alfred Peet, who emphasized fresh roasting, quality beans, and proper brewing technique over convenience."></span>.
+                </p>
+
+                <p>
+                    The approach here is methodical but not obsessive. The goal is understanding the underlying principles well enough to consistently produce excellent coffee while maintaining flexibility for experimentation and adaptation to different circumstances.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Brewing Fundamentals</h2>
+                
+                <p>
+                    Consistent coffee requires controlling several interrelated variables. Understanding their relationships enables purposeful adjustment rather than random experimentation.
+                </p>
+
+                <h3>The Extraction Framework</h3>
+                
+                <p>
+                    Coffee extraction operates within defined boundaries:
+                </p>
+
+                <ul>
+                    <li><strong>Under-extraction (< 18%):</strong> Sour, weak, lacking body</li>
+                    <li><strong>Optimal extraction (18-22%):</strong> Balanced sweetness, acidity, and body</li>
+                    <li><strong>Over-extraction (> 22%):</strong> Bitter, harsh, astringent</li>
+                </ul>
+
+                <p>
+                    These percentages represent the proportion of coffee bean mass dissolved into water. Specialty coffee equipment often includes refractometers to measure extraction yield precisely, but taste remains the ultimate guide<span class="sidenote-mark" data-content="The Specialty Coffee Association's brewing standards specify 18-22% extraction yield and 1.15-1.35% total dissolved solids (TDS) for optimal coffee."></span>.
+                </p>
+
+                <h3>Primary Variables</h3>
+                
+                <details class="collapsible">
+                    <summary>Grind Size</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Particle size determines extraction rate. Smaller particles expose more surface area to water, increasing extraction speed. The challenge is achieving consistent particle size distribution.
+                        </p>
+                        <p>
+                            <strong>Grinder types:</strong>
+                        </p>
+                        <ul>
+                            <li><strong>Blade grinders:</strong> Inconsistent, produce many "fines" (powder)</li>
+                            <li><strong>Burr grinders:</strong> More consistent, adjustable size settings</li>
+                            <li><strong>High-end burr grinders:</strong> Minimize fines, maximize uniformity</li>
+                        </ul>
+                        <p>
+                            Investment in a quality grinder yields more improvement than expensive brewing equipment with poor grinding.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Water Temperature</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Higher temperatures increase extraction rate but also extract more bitter compounds. The optimal range for most coffees is 195-205°F (90-96°C).
+                        </p>
+                        <p>
+                            <strong>Temperature effects:</strong>
+                        </p>
+                        <ul>
+                            <li><strong>Too low (< 190°F):</strong> Under-extraction, sour notes</li>
+                            <li><strong>Optimal (195-205°F):</strong> Balanced extraction</li>
+                            <li><strong>Too high (> 210°F):</strong> Over-extraction, bitterness</li>
+                        </ul>
+                        <p>
+                            Darker roasts generally benefit from slightly lower temperatures, while lighter roasts may need higher temperatures for adequate extraction.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Brew Time</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Longer contact time increases total extraction. Different brewing methods use different time ranges:
+                        </p>
+                        <ul>
+                            <li><strong>Espresso:</strong> 25-30 seconds</li>
+                            <li><strong>Pour over:</strong> 2-4 minutes</li>
+                            <li><strong>French press:</strong> 4 minutes</li>
+                            <li><strong>Cold brew:</strong> 12-24 hours</li>
+                        </ul>
+                        <p>
+                            Time must be balanced with other variables. Finer grinds typically require shorter brew times to avoid over-extraction.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Water Quality</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Coffee is ~98% water, making water quality crucial. Key factors:
+                        </p>
+                        <ul>
+                            <li><strong>Mineral content:</strong> Some minerals enhance extraction and flavor</li>
+                            <li><strong>pH level:</strong> Slightly acidic water (6.5-7.5 pH) is optimal</li>
+                            <li><strong>Chlorine:</strong> Must be removed, affects taste significantly</li>
+                            <li><strong>Total dissolved solids:</strong> 150-300 ppm optimal</li>
+                        </ul>
+                        <p>
+                            Distilled water produces flat coffee; heavily mineralized water creates harsh flavors. Many coffee professionals use specific water recipes for consistent results.
+                        </p>
+                    </div>
+                </details>
+            </section>
+
+            <section class="section">
+                <h2>Brewing Methods</h2>
+                
+                <p>
+                    Different brewing methods emphasize different aspects of coffee flavor. Each has optimal applications based on desired outcome and practical constraints.
+                </p>
+
+                <h3>Pour Over Methods</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Filter Type</th>
+                            <th>Characteristics</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>V60</td>
+                            <td>Paper (thin)</td>
+                            <td>Clean, bright, acidic</td>
+                            <td>Light roasts, origin character</td>
+                        </tr>
+                        <tr>
+                            <td>Chemex</td>
+                            <td>Paper (thick)</td>
+                            <td>Very clean, delicate</td>
+                            <td>Highlighting subtle flavors</td>
+                        </tr>
+                        <tr>
+                            <td>Kalita Wave</td>
+                            <td>Paper (flat bottom)</td>
+                            <td>Balanced, forgiving</td>
+                            <td>Consistent daily brewing</td>
+                        </tr>
+                        <tr>
+                            <td>Clever Dripper</td>
+                            <td>Paper (immersion)</td>
+                            <td>Full body, easy control</td>
+                            <td>Beginners, convenience</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Pour over methods allow precise control over extraction variables but require attention and technique. The pouring pattern, timing, and water temperature all significantly affect the final cup<span class="sidenote-mark" data-content="The Japanese coffee culture has refined pour-over technique to an art form, with competitions focused on precision, consistency, and repeatability."></span>.
+                </p>
+
+                <h3>Immersion Methods</h3>
+                
+                <p>
+                    Immersion brewing involves steeping coffee grounds in water for a specific time before separating. These methods are generally more forgiving and produce fuller-bodied coffee:
+                </p>
+
+                <ul>
+                    <li><strong>French Press:</strong> Full immersion, metal filter retains oils and fines</li>
+                    <li><strong>AeroPress:</strong> Short immersion + pressure, paper filter for clarity</li>
+                    <li><strong>Cold Brew:</strong> Long immersion at room temperature, smooth and concentrated</li>
+                    <li><strong>Cupping:</strong> Professional tasting method, direct immersion in bowl</li>
+                </ul>
+
+                <h3>Espresso</h3>
+                
+                <p>
+                    Espresso uses pressure (9 bars) to force water through finely ground coffee in ~25-30 seconds. This creates a concentrated beverage with unique characteristics:
+                </p>
+
+                <ul>
+                    <li><strong>Crema:</strong> Foam layer created by CO2 and oils under pressure</li>
+                    <li><strong>Body:</strong> Thick, syrupy texture from high extraction concentration</li>
+                    <li><strong>Flavor intensity:</strong> Concentrated flavors, both positive and negative</li>
+                    <li><strong>Technical demands:</strong> Requires precise grind, dose, and technique</li>
+                </ul>
+
+                <p>
+                    Espresso serves as the base for milk drinks (cappuccino, latte, cortado) and represents the most technically demanding brewing method. Small changes in any variable produce significant differences in the cup.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Equipment Analysis</h2>
+                
+                <p>
+                    Coffee equipment ranges from simple to complex, expensive to affordable. The key is matching tools to goals and usage patterns rather than pursuing the most expensive options.
+                </p>
+
+                <h3>Current Setup</h3>
+                
+                <p>
+                    My current brewing setup, chosen for versatility and consistent results:
+                </p>
+
+                <ul>
+                    <li><strong>Grinder:</strong> Comandante C40 (hand grinder, excellent consistency)</li>
+                    <li><strong>Scale:</strong> Acaia Pearl (0.1g precision, timer, water-resistant)</li>
+                    <li><strong>Kettle:</strong> Fellow Stagg EKG (temperature control, gooseneck spout)</li>
+                    <li><strong>Brewers:</strong> V60, Chemex, AeroPress, French Press</li>
+                    <li><strong>Espresso:</strong> Flair Pro 2 (manual lever, portable)</li>
+                </ul>
+
+                <p>
+                    This setup prioritizes consistency and control over convenience. Manual methods require more attention but provide better understanding of brewing variables and greater flexibility for experimentation.
+                </p>
+
+                <h3>Equipment Categories</h3>
+                
+                <p>
+                    Coffee equipment falls into several categories with different cost/benefit relationships:
+                </p>
+
+                <details class="collapsible">
+                    <summary>Essential (High Impact)</summary>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li><strong>Quality grinder:</strong> Single biggest improvement for most people</li>
+                            <li><strong>Accurate scale:</strong> Enables consistency through measurement</li>
+                            <li><strong>Temperature control:</strong> Kettle with thermometer or temp control</li>
+                            <li><strong>Fresh beans:</strong> More important than any equipment upgrade</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Useful (Medium Impact)</summary>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li><strong>Multiple brewing methods:</strong> Different methods for different beans/moods</li>
+                            <li><strong>Timer:</strong> Consistency in brew time (often built into scales)</li>
+                            <li><strong>Water filtration:</strong> Consistent water quality</li>
+                            <li><strong>Storage containers:</strong> Preserve bean freshness</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Luxury (Low Impact)</summary>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li><strong>Expensive grinders:</strong> Diminishing returns beyond mid-range options</li>
+                            <li><strong>Automatic brewers:</strong> Convenience over control</li>
+                            <li><strong>Exotic materials:</strong> Minimal impact on taste</li>
+                            <li><strong>Measurement tools:</strong> Refractometers, TDS meters (useful for learning)</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <section class="section">
+                <h2>Bean Selection</h2>
+                
+                <p>
+                    Coffee beans are the raw material that determines the upper limit of cup quality. No brewing technique can improve poor beans, but poor technique can ruin great beans.
+                </p>
+
+                <h3>Roast Levels</h3>
+                
+                <p>
+                    Roast level significantly affects flavor, with each level emphasizing different characteristics:
+                </p>
+
+                <ul>
+                    <li><strong>Light roasts:</strong> Origin character, acidity, floral/fruity notes</li>
+                    <li><strong>Medium roasts:</strong> Balance between origin and roast character</li>
+                    <li><strong>Dark roasts:</strong> Roast character dominates, less origin distinction</li>
+                </ul>
+
+                <p>
+                    Personal preference varies, but lighter roasts generally require more precision in brewing while darker roasts are more forgiving but offer less complexity<span class="sidenote-mark" data-content="The 'third wave' coffee movement emphasizes lighter roasts to showcase origin characteristics, in contrast to traditional dark roasts that prioritize roast flavors."></span>.
+                </p>
+
+                <h3>Origin Characteristics</h3>
+                
+                <p>
+                    Different growing regions produce characteristic flavor profiles:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Typical Flavors</th>
+                            <th>Processing</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ethiopia</td>
+                            <td>Floral, fruity, tea-like</td>
+                            <td>Natural, washed</td>
+                            <td>Birthplace of coffee, high complexity</td>
+                        </tr>
+                        <tr>
+                            <td>Kenya</td>
+                            <td>Black currant, wine-like acidity</td>
+                            <td>Washed</td>
+                            <td>Distinctive processing method</td>
+                        </tr>
+                        <tr>
+                            <td>Colombia</td>
+                            <td>Balanced, caramel, nutty</td>
+                            <td>Washed</td>
+                            <td>Consistent quality, reliable</td>
+                        </tr>
+                        <tr>
+                            <td>Guatemala</td>
+                            <td>Chocolate, spice, full body</td>
+                            <td>Washed</td>
+                            <td>High altitude, volcanic soil</td>
+                        </tr>
+                        <tr>
+                            <td>Brazil</td>
+                            <td>Nutty, low acidity, chocolatey</td>
+                            <td>Natural</td>
+                            <td>Largest producer, good for espresso</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Freshness</h3>
+                
+                <p>
+                    Coffee quality degrades predictably after roasting:
+                </p>
+
+                <ul>
+                    <li><strong>Days 2-5:</strong> Peak flavor development, CO2 still degassing</li>
+                    <li><strong>Days 5-14:</strong> Optimal brewing window for most methods</li>
+                    <li><strong>Days 14-30:</strong> Still good but declining complexity</li>
+                    <li><strong>Beyond 30 days:</strong> Noticeably stale, flat flavors</li>
+                </ul>
+
+                <p>
+                    Buying from local roasters with high turnover ensures fresher beans than most grocery store options. Freezing extends freshness if done properly (sealed, portioned bags).
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Experiments and Results</h2>
+                
+                <h3>Grind Size Optimization</h3>
+                
+                <p>
+                    <strong>Hypothesis:</strong> Optimal grind size varies with bean density, roast level, and brewing method more than commonly understood.
+                </p>
+                
+                <p>
+                    <strong>Method:</strong> Used same bean (Colombian medium roast) with V60, testing 7 grind settings while keeping other variables constant. Measured extraction time and tasted systematically.
+                </p>
+                
+                <p>
+                    <strong>Results:</strong>
+                </p>
+                <ul>
+                    <li>Coarser grinds (longer brew time) produced more balanced cups</li>
+                    <li>Finer grinds increased extraction but also bitterness</li>
+                    <li>Sweet spot was coarser than expected based on conventional guidance</li>
+                    <li>Same bean required different grind sizes with different water minerals</li>
+                </ul>
+                
+                <p>
+                    <strong>Conclusion:</strong> Standard brewing recipes are starting points, not destinations. Systematic experimentation reveals optimal settings for specific combinations of bean, water, and equipment.
+                </p>
+
+                <h3>Water Recipe Testing</h3>
+                
+                <p>
+                    <strong>Hypothesis:</strong> Specific mineral profiles would enhance certain coffee characteristics.
+                </p>
+                
+                <p>
+                    <strong>Method:</strong> Created three water recipes with different mineral compositions. Tested same coffee (Ethiopian light roast) with each water type using identical brewing parameters.
+                </p>
+                
+                <p>
+                    <strong>Results:</strong>
+                </p>
+                <ul>
+                    <li><strong>High magnesium:</strong> Enhanced body and sweetness</li>
+                    <li><strong>High calcium:</strong> Increased extraction efficiency</li>
+                    <li><strong>Balanced minerals:</strong> Most versatile across different beans</li>
+                    <li><strong>Distilled water:</strong> Flat, one-dimensional flavor</li>
+                </ul>
+                
+                <p>
+                    <strong>Conclusion:</strong> Water composition significantly affects coffee taste, but optimal profiles depend on bean characteristics and personal preference. Having consistent water is more important than having perfect water.
+                </p>
+
+                <h3>Cold Brew Concentration</h3>
+                
+                <p>
+                    <strong>Hypothesis:</strong> Different coffee-to-water ratios in cold brew would create distinct flavor profiles suitable for different applications.
+                </p>
+                
+                <p>
+                    <strong>Method:</strong> Tested ratios from 1:8 to 1:15 using identical beans, grind size, and steeping time (18 hours). Evaluated both straight and diluted versions.
+                </p>
+                
+                <p>
+                    <strong>Results:</strong>
+                </p>
+                <ul>
+                    <li><strong>1:8 ratio:</strong> Very concentrated, good for milk drinks</li>
+                    <li><strong>1:12 ratio:</strong> Balanced concentrate, versatile for dilution</li>
+                    <li><strong>1:15 ratio:</strong> Ready-to-drink strength, lighter body</li>
+                    <li>Stronger concentrates preserved better in refrigerator</li>
+                </ul>
+                
+                <p>
+                    <strong>Conclusion:</strong> Cold brew concentration should match intended use. Concentrates offer more flexibility but require dilution calibration for optimal results.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Daily Routine</h2>
+                
+                <p>
+                    My current coffee routine, optimized for consistency and enjoyment rather than perfection:
+                </p>
+
+                <h3>Morning Ritual</h3>
+                
+                <ol>
+                    <li><strong>Measure and grind:</strong> 20g coffee, medium-fine grind</li>
+                    <li><strong>Heat water:</strong> 500ml to 200°F in temperature-controlled kettle</li>
+                    <li><strong>Rinse filter:</strong> V60 paper filter with hot water</li>
+                    <li><strong>Bloom:</strong> 40ml water, 30-second wait</li>
+                    <li><strong>Pour phases:</strong> 160ml at 1:00, 160ml at 2:00, final 140ml at 3:00</li>
+                    <li><strong>Total time:</strong> 4-5 minutes including grinding and setup</li>
+                </ol>
+
+                <p>
+                    This routine produces consistent results without excessive complexity. The timing is flexible enough to accommodate morning variations while maintaining key principles.
+                </p>
+
+                <h3>Weekend Exploration</h3>
+                
+                <p>
+                    Weekends allow for more experimental brewing:
+                </p>
+
+                <ul>
+                    <li>Testing new beans with multiple brewing methods</li>
+                    <li>Adjusting grind size based on taste feedback</li>
+                    <li>Trying different pouring patterns or timing</li>
+                    <li>Comparing same bean with different water recipes</li>
+                </ul>
+
+                <p>
+                    The goal is maintaining curiosity and continuous improvement while avoiding the trap of endless optimization that prevents enjoyment of the process.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Philosophy</h2>
+                
+                <blockquote>
+                    <p>"The perfect cup of coffee is the one you're drinking right now."</p>
+                    <cite>— Coffee shop wisdom</cite>
+                </blockquote>
+                
+                <p>
+                    Coffee brewing exemplifies the balance between systematic thinking and sensory enjoyment. Understanding the science enables better results, but the ultimate measure is subjective satisfaction. The best approach combines:
+                </p>
+
+                <ul>
+                    <li><strong>Consistent basics:</strong> Control fundamental variables reliably</li>
+                    <li><strong>Systematic experimentation:</strong> Change one variable at a time</li>
+                    <li><strong>Taste-driven decisions:</strong> Trust palate over measurements</li>
+                    <li><strong>Contextual adaptation:</strong> Adjust methods to circumstances</li>
+                    <li><strong>Process enjoyment:</strong> The ritual is part of the value</li>
+                </ul>
+
+                <p>
+                    Coffee serves multiple functions: fuel for work, sensory pleasure, meditative routine, social catalyst. The brewing approach should support these broader purposes rather than become an end in itself<span class="sidenote-mark" data-content="James Hoffmann's approach to coffee education emphasizes understanding principles over following recipes, enabling adaptation to personal preferences and available equipment."></span>.
+                </p>
+
+                <p>
+                    The deeper lesson extends beyond coffee: systematic approaches work best when they serve human goals rather than replacing human judgment. Science informs art but doesn't replace it.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2024 · <a href="#colophon">Colophon</a> · <a href="#contact">Contact</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="dark-mode.js"></script>
+    <script src="sidenotes.js"></script>
+</body>
+</html>

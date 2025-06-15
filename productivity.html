@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Productivity systems focused on attention management and distraction elimination">
+    <title>Productivity - Experiments & Systems</title>
+    
+    <!-- Preconnect to font sources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font loading with fallbacks -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Theme detection -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme-preference') || 'auto';
+            if (theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-home">Experiments & Systems</a>
+            <div class="nav-links">
+                <a href="productivity.html">Productivity</a>
+                <a href="music.html">Music</a>
+                <a href="coffee.html">Coffee</a>
+                <a href="example-post.html">Writing</a>
+                <a href="about.html">About</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article>
+            <header class="page-header">
+                <h1>Productivity</h1>
+                <p class="subtitle">Systems for focus in an age of distraction</p>
+            </header>
+
+            <section>
+                <p class="first-paragraph">
+                    <span class="dropcap">P</span>roductivity is not about doing more things. It's about doing the right things with sustained attention. In our hyperconnected world, the scarcest resource is not time but focused attention<span class="sidenote-mark" data-content="Cal Newport's 'Deep Work' provides compelling evidence that focused attention is becoming both increasingly rare and increasingly valuable in our economy."></span>. This page documents experiments in attention management, distraction elimination, and the design of sustainable work practices.
+                </p>
+
+                <p>
+                    The approach here differs from typical productivity advice in several ways: it prioritizes attention over time, systems over motivation, and sustainability over optimization. The goal is not peak performance but consistent, meaningful progress.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>The Distraction Problem</h2>
+                
+                <p>
+                    Modern knowledge work operates in an environment designed to fragment attention. Email, notifications, open-plan offices, and the constant availability of information create what Linda Stone calls "continuous partial attention"<span class="sidenote-mark" data-content="Stone coined this term in 1998 to describe the state of maintaining a top-level item of attention while scanning the periphery for other opportunities."></span> — a state where we're always monitoring but never fully engaged.
+                </p>
+
+                <h3>Types of Distraction</h3>
+                
+                <p>
+                    Understanding distraction requires distinguishing between its various forms:
+                </p>
+
+                <ul>
+                    <li><strong>External interruptions:</strong> Email, messages, phone calls, colleagues</li>
+                    <li><strong>Internal distractions:</strong> Wandering thoughts, anxiety, task-switching impulses</li>
+                    <li><strong>Pseudo-work:</strong> Busy work that feels productive but doesn't advance meaningful goals</li>
+                    <li><strong>Context switching:</strong> The cognitive overhead of moving between different types of tasks</li>
+                </ul>
+
+                <p>
+                    Each type requires different countermeasures. External interruptions can be managed through environmental design, while internal distractions often require mindfulness practices and better work structure.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Attention Management Framework</h2>
+                
+                <p>
+                    Rather than managing time, I focus on managing attention across four dimensions:
+                </p>
+
+                <details class="collapsible">
+                    <summary>Depth (Focused vs. Diffuse)</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Deep work requires sustained focus on cognitively demanding tasks. This state is incompatible with multitasking or frequent interruptions. I protect this mode through:
+                        </p>
+                        <ul>
+                            <li>Time blocking: 90-120 minute sessions of uninterrupted work</li>
+                            <li>Environmental design: Dedicated space with minimal visual distractions</li>
+                            <li>Digital minimalism: Phone in another room, notifications disabled</li>
+                            <li>Ritual: Consistent start/end routines to signal mode transitions</li>
+                        </ul>
+                        <p>
+                            Diffuse attention is equally important for creativity and problem-solving. Walking, showering, or simple manual tasks often trigger insights that focused thinking cannot reach.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Direction (Reactive vs. Proactive)</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Reactive attention responds to external stimuli — email, requests, urgencies. While necessary, reactive mode can consume entire days without advancing important goals.
+                        </p>
+                        <p>
+                            Proactive attention is self-directed toward chosen priorities. I protect proactive time by:
+                        </p>
+                        <ul>
+                            <li>Starting each day with proactive work before checking email</li>
+                            <li>Batch processing reactive tasks at designated times</li>
+                            <li>Using "capture" systems to defer non-urgent reactive items</li>
+                            <li>Regular review cycles to ensure reactive work serves larger goals</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Scope (Narrow vs. Broad)</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Narrow attention focuses on specific tasks or problems. Broad attention maintains awareness of larger context, connections, and priorities.
+                        </p>
+                        <p>
+                            Both are necessary. I cultivate broad attention through:
+                        </p>
+                        <ul>
+                            <li>Weekly reviews to maintain perspective on goals and progress</li>
+                            <li>Regular breaks to step back from immediate tasks</li>
+                            <li>Connecting current work to larger purposes and values</li>
+                            <li>Periodic "zoom out" sessions to reassess priorities</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="collapsible">
+                    <summary>Energy (High vs. Low)</summary>
+                    <div class="collapsible-content">
+                        <p>
+                            Attention quality varies with energy levels. High-energy attention is capable of sustained focus and complex reasoning. Low-energy attention is better suited to routine tasks.
+                        </p>
+                        <p>
+                            I match tasks to energy levels by:
+                        </p>
+                        <ul>
+                            <li>Tracking energy patterns to identify peak performance times</li>
+                            <li>Scheduling demanding work during high-energy periods</li>
+                            <li>Maintaining a "low-energy task list" for tired moments</li>
+                            <li>Protecting energy through sleep, exercise, and stress management</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <section class="section">
+                <h2>Practical Systems</h2>
+                
+                <h3>Daily Structure</h3>
+                
+                <p>
+                    My daily routine optimizes for sustained attention rather than maximal output:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Attention Mode</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00-7:00</td>
+                            <td>Morning routine</td>
+                            <td>Diffuse</td>
+                            <td>Prepare mind for focused work</td>
+                        </tr>
+                        <tr>
+                            <td>7:00-9:30</td>
+                            <td>Deep work block</td>
+                            <td>Focused/Proactive</td>
+                            <td>Most important creative work</td>
+                        </tr>
+                        <tr>
+                            <td>9:30-10:00</td>
+                            <td>Break/movement</td>
+                            <td>Diffuse</td>
+                            <td>Cognitive recovery</td>
+                        </tr>
+                        <tr>
+                            <td>10:00-12:00</td>
+                            <td>Collaborative work</td>
+                            <td>Focused/Reactive</td>
+                            <td>Meetings, communication</td>
+                        </tr>
+                        <tr>
+                            <td>12:00-13:00</td>
+                            <td>Lunch/walk</td>
+                            <td>Diffuse</td>
+                            <td>Physical and mental break</td>
+                        </tr>
+                        <tr>
+                            <td>13:00-15:00</td>
+                            <td>Administrative tasks</td>
+                            <td>Reactive</td>
+                            <td>Email, planning, organizing</td>
+                        </tr>
+                        <tr>
+                            <td>15:00-17:00</td>
+                            <td>Learning/research</td>
+                            <td>Broad/Proactive</td>
+                            <td>Skill development, exploration</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    This structure protects high-quality attention for important work while accommodating necessary reactive tasks. The specific times matter less than the principle of matching work types to attention modes<span class="sidenote-mark" data-content="Chronotype research suggests that optimal timing varies by individual. Some people are most alert in the morning, others in the afternoon or evening. The key is identifying your pattern and structuring accordingly."></span>.
+                </p>
+
+                <h3>Environmental Design</h3>
+                
+                <p>
+                    Physical and digital environments significantly impact attention quality. Key principles:
+                </p>
+
+                <ul>
+                    <li><strong>Reduce visual clutter:</strong> Clear surfaces, minimal decorations, organized spaces</li>
+                    <li><strong>Control lighting:</strong> Natural light when possible, adjustable artificial lighting</li>
+                    <li><strong>Manage sound:</strong> Quiet spaces for focused work, background noise for routine tasks</li>
+                    <li><strong>Optimize ergonomics:</strong> Comfortable seating, proper screen height, accessible tools</li>
+                    <li><strong>Digital minimalism:</strong> Close unnecessary applications, disable non-essential notifications</li>
+                </ul>
+
+                <h3>Capture Systems</h3>
+                
+                <p>
+                    A reliable capture system prevents thoughts and tasks from occupying working memory. I use:
+                </p>
+
+                <ul>
+                    <li><strong>Inbox:</strong> Single location for all incoming items (physical notebook)</li>
+                    <li><strong>Processing ritual:</strong> Daily review and categorization of captured items</li>
+                    <li><strong>Action lists:</strong> Next actions organized by context and energy level</li>
+                    <li><strong>Reference system:</strong> Easy retrieval of information and ideas</li>
+                </ul>
+
+                <blockquote>
+                    <p>"Your mind is for having ideas, not holding them."</p>
+                    <cite>— David Allen, Getting Things Done</cite>
+                </blockquote>
+            </section>
+
+            <section class="section">
+                <h2>Experiments and Results</h2>
+                
+                <h3>Phone Separation</h3>
+                
+                <p>
+                    <strong>Hypothesis:</strong> Physical separation from smartphone would reduce distraction and improve focus quality.
+                </p>
+                
+                <p>
+                    <strong>Method:</strong> For 30 days, kept phone in another room during work hours. Checked messages only at designated times (10am, 2pm, 6pm).
+                </p>
+                
+                <p>
+                    <strong>Results:</strong> 
+                </p>
+                <ul>
+                    <li>Reduced urge to check phone within first week</li>
+                    <li>Improved ability to sustain attention on single tasks</li>
+                    <li>Increased anxiety about missing urgent messages (first week only)</li>
+                    <li>Better completion rates for deep work sessions</li>
+                </ul>
+                
+                <p>
+                    <strong>Conclusion:</strong> Physical separation is more effective than relying on willpower to resist checking. The inconvenience of retrieval creates enough friction to break habitual reaching.
+                </p>
+
+                <h3>Notification Audit</h3>
+                
+                <p>
+                    <strong>Hypothesis:</strong> Most notifications are unnecessary and can be eliminated without missing important information.
+                </p>
+                
+                <p>
+                    <strong>Method:</strong> Cataloged all notifications across devices and applications. Disabled all non-essential notifications. Tracked what (if anything) was missed over 60 days.
+                </p>
+                
+                <p>
+                    <strong>Results:</strong>
+                </p>
+                <ul>
+                    <li>Reduced notifications from ~50 to 3 per day</li>
+                    <li>Missed exactly zero important communications</li>
+                    <li>Improved focus during work sessions</li>
+                    <li>Less fragmented attention throughout the day</li>
+                </ul>
+                
+                <p>
+                    <strong>Conclusion:</strong> The vast majority of notifications are not urgent or important. Default settings are designed for engagement, not productivity.
+                </p>
+
+                <h3>Time-Blocking vs. Task Lists</h3>
+                
+                <p>
+                    <strong>Hypothesis:</strong> Scheduling specific times for tasks (time-blocking) would be more effective than maintaining flexible task lists.
+                </p>
+                
+                <p>
+                    <strong>Method:</strong> Alternated between time-blocking and task-list approaches for 8 weeks each. Measured task completion rates and subjective satisfaction.
+                </p>
+                
+                <p>
+                    <strong>Results:</strong>
+                </p>
+                <ul>
+                    <li>Time-blocking: Higher completion rate for important tasks, lower flexibility</li>
+                    <li>Task lists: Better adaptation to changing priorities, lower completion rates</li>
+                    <li>Hybrid approach emerged: time-block for deep work, task lists for reactive work</li>
+                </ul>
+                
+                <p>
+                    <strong>Conclusion:</strong> Different approaches suit different types of work. The key is matching the planning method to the work's characteristics<span class="sidenote-mark" data-content="This finding aligns with research on implementation intentions, which shows that specific plans ('I will do X at time Y') are more effective for important but non-urgent tasks."></span>.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Current Principles</h2>
+                
+                <p>
+                    Based on ongoing experimentation, these principles currently guide my productivity approach:
+                </p>
+
+                <ol>
+                    <li><strong>Attention is the constraint:</strong> Optimize for attention quality, not time quantity</li>
+                    <li><strong>Systems over willpower:</strong> Design environments and processes that make good choices easier</li>
+                    <li><strong>Sustainable pace:</strong> Optimize for consistency over peak performance</li>
+                    <li><strong>Energy management:</strong> Match work types to energy levels and attention modes</li>
+                    <li><strong>Regular experimentation:</strong> Continuously test and refine approaches</li>
+                    <li><strong>Context matters:</strong> What works varies by person, work type, and life circumstances</li>
+                </ol>
+
+                <p>
+                    The most important insight: productivity is not about finding the perfect system but about developing the skill of system design and refinement. The specific tactics matter less than the ability to observe, experiment, and adapt.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2024 · <a href="#colophon">Colophon</a> · <a href="#contact">Contact</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="dark-mode.js"></script>
+    <script src="sidenotes.js"></script>
+</body>
+</html>
