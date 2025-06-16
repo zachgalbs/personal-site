@@ -199,13 +199,25 @@ a:hover {
     margin-bottom: var(--space-sm);
 }
 
+/* Introduction section */
+.intro-section {
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-section p {
+    margin-bottom: var(--space-lg);
+}
+
 /* Dropcap */
 .dropcap {
     float: left;
     font-size: 4rem;
     line-height: 1;
     font-weight: 400;
-    margin-right: var(--space-xs);
+    margin-right: var(--space-sm);
     margin-top: -0.1em;
     font-family: var(--font-sans);
 }
