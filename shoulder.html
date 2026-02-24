@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shoulder — a macOS productivity tracker that watches your screen so you don't have to">
+    <title>Shoulder - galbs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'auto';
+            if (theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+    <style>
+        .screenshot-placeholder {
+            border: 1px dashed var(--color-border);
+            background-color: var(--color-bg-alt);
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-muted);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            margin: var(--space-lg) 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+
+        @media (max-width: 768px) {
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .availability-notice {
+            border: 1px solid var(--color-border);
+            padding: var(--space-md) var(--space-lg);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-xl);
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-home">galbs</a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article>
+            <header class="page-header">
+                <h1>Shoulder</h1>
+                <p class="subtitle">macOS &middot; personal project</p>
+            </header>
+
+            <div class="availability-notice">
+                Shoulder is a personal project and is not publicly available.
+            </div>
+
+            <section>
+                <p class="first-paragraph">
+                    Shoulder is a macOS app that periodically looks at your screen and decides whether you're actually being productive. Think of it as a quiet presence watching over your shoulder — hence the name.
+                </p>
+
+                <p>
+                    Most screentime tools track app usage, which is easy to game. Shoulder goes a level deeper: it captures your screen at intervals and runs it through a model to classify what's actually happening. Reading documentation counts. Doom-scrolling doesn't.
+                </p>
+            </section>
+
+            <section>
+                <h2>Screenshots</h2>
+                <img src="images/Home_Screen.png" alt="Shoulder home screen" data-no-invert>
+                <div class="screenshot-grid">
+                    <img src="images/Focus_Screen.png" alt="Shoulder focus screen" data-no-invert>
+                    <img src="images/Distraction_Notification.png" alt="Shoulder distraction notification" data-no-invert>
+                </div>
+            </section>
+
+            <section>
+                <h2>How it works</h2>
+                <p>
+                    At a configurable interval, Shoulder captures a screenshot and sends it to a vision model for classification. For privacy-sensitive contexts, it can run a local model entirely on-device. For higher accuracy, it can route to a cloud model instead. You can configure which to use, or let it decide based on context.
+                </p>
+                <p>
+                    Results are logged over time, letting you see patterns in your focus and distraction across the day.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+    </footer>
+
+    <script src="dark-mode.js"></script>
+    <script src="sidenotes.js"></script>
+</body>
+</html>
