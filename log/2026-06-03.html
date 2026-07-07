@@ -34,20 +34,36 @@
     <main class="content">
         <article>
             <header class="page-header">
-                <h1>Day 7: Polishing</h1>
-                <p class="subtitle">June 3, 2026</p>
+                <h1>Day 7: Fixing timelapse</h1>
+                <p class="subtitle">June 9, 2026</p>
             </header>
 
             <section class="section">
 <h2>What I worked on</h2>
+<p>Timelapse used to take forever to load, and the timer used to keep going, I fixed this.</p>
+<p>Added screen recording</p>
             </section>
 
             <section class="section">
 <h2>What I learned</h2>
+<h3>Timer not working?</h3>
+<p>The timer used to only stop after the timelapse was generated. I simply moved the line of code that stopped the timer to before, once the stop button was pressed.</p>
+<h3>What part of the timelapse generation is slow?</h3>
+<p>The encoding. Currently we take two frames a second, and then stitch them together to be 30fps, making the video 15x faster.</p>
+<p>By the time the video ends, we have all the frames stored and ready to go, but the API currently used is a tape-recorder, so if we want to stitch together a 2 minute video we literally have to wait 2 minutes to stitch together the frames.</p>
+<h3>The fix</h3>
+<p>We need to use another library that can take frames and delays and immediately spit out a timelapse. I&rsquo;m hoping that after this change, once you end your study session you can immediately download the timelapse to share with friends.</p>
+<p>VideoEncoder does just this. The only catch is it outputs raw VP9 chunks, not a playable file like an MP4. To transfer to an MP4, we need to add a dependency called mp4-muxer.</p>
+<p>Swapped them out, encoded while the video was streaming, and now everything works smoothly!</p>
+<h3>Screen Recording</h3>
+<p>The goal is to record your screen along with your face so that the timelapse can show you and what you&rsquo;re working on. This way when you share with friends they can see what you were doing. This provides a great incentive to stay focused on the task at hand when in a study session.</p>
+<p>I changed the camera recording to be a small section in the bottom left of the screen recording.</p>
+<p>By encoding both the screen recording and the camera feed while the video is streaming I made it so that the timelapse processes immediately, making it super easy to download and share with friends.</p>
             </section>
 
             <section class="section">
 <h2>What&rsquo;s still confusing</h2>
+<p>Why isn&rsquo;t it possible to add the timelapse video to the clipboard? Does the clipboard not support large sizes?</p>
             </section>
         </article>
     </main>
